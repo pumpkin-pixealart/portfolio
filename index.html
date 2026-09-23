@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>Mari B. | Pumpkin Pixelart</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -19,7 +21,7 @@
       margin: 0;
       background: #0d0d13;
       color: #f3eef5;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
@@ -28,10 +30,20 @@
       image-rendering: crisp-edges;
     }
 
+    a {
+      color: #b58bd4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #e0c8f2;
+    }
+
+
     /* HERO */
 
     header {
-      min-height: 82vh;
+      min-height: 65vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -47,21 +59,22 @@
       color: #a78bc7;
       text-transform: uppercase;
       letter-spacing: 4px;
-      font-size: 13px;
-      margin-bottom: 16px;
+      font-size: 12px;
+      margin-bottom: 14px;
     }
 
     h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
       margin: 0;
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
     }
 
     .subtitle {
-      margin-top: 18px;
       color: #b9afc2;
-      font-size: 20px;
+      font-size: 19px;
+      margin-top: 18px;
     }
+
 
     /* GENERAL */
 
@@ -71,101 +84,157 @@
     }
 
     section {
-      margin-bottom: 110px;
+      margin-bottom: 120px;
     }
 
     h2 {
-      font-size: clamp(30px, 5vw, 46px);
-      margin-bottom: 10px;
+      font-size: clamp(30px, 5vw, 44px);
+      margin: 0 0 8px;
     }
 
     h3 {
-      font-size: 22px;
-      margin-bottom: 25px;
-      color: #d6c4e8;
+      font-size: 25px;
+      margin: 0 0 10px;
     }
 
-    .project-description {
-      max-width: 760px;
-      color: #aaa1b2;
-      margin-bottom: 50px;
+    h4 {
+      color: #d7c7e5;
+      font-size: 18px;
+      margin: 0 0 18px;
     }
 
     .divider {
       width: 55px;
       height: 4px;
       background: #765394;
-      margin: 22px 0 35px;
+      margin: 22px 0 30px;
     }
 
-    /* FEATURE IMAGE */
-
-    .feature {
-      width: 100%;
-      display: block;
-      border: 1px solid #292431;
-      background: #111118;
+    .project-text {
+      max-width: 820px;
+      color: #b3aabb;
+      font-size: 16px;
+      margin-bottom: 22px;
     }
 
-    /* CHARACTER LINEUP */
-
-    .character-section {
-      text-align: center;
-      margin-top: 80px;
+    .section-text {
+      max-width: 720px;
+      color: #99909f;
+      margin-bottom: 30px;
     }
 
-    .characters {
-      width: min(600px, 100%);
-      margin: 10px auto 0;
-      display: block;
-    }
-
-    /* ANIMATIONS */
-
-    .animation-section {
+    .subsection {
       margin-top: 90px;
     }
 
-    .animations {
+
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0 50px;
+    }
+
+    .tag {
+      border: 1px solid #493a58;
+      background: #15121c;
+      color: #cdb9dc;
+      padding: 7px 13px;
+      font-size: 12px;
+    }
+
+
+    /* MAIN ART */
+
+    .main-art {
+      width: 100%;
+      display: block;
+      border: 1px solid #292431;
+    }
+
+
+    /* CHARACTER DESIGN */
+
+    .character-design {
+      text-align: center;
+    }
+
+    .character-design .section-text {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .character-lineup {
+      width: min(650px, 100%);
+      display: block;
+      margin: 30px auto 0;
+    }
+
+
+    /* ANIMATIONS */
+
+    .animation-group {
+      margin-top: 55px;
+    }
+
+    .animation-grid {
       display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .animation-grid.three {
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    }
+
+    .animation-grid.two {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 600px;
     }
 
     .animation-card {
-      min-height: 280px;
+      min-height: 230px;
       background: #14131b;
-      border: 1px solid #292431;
+      border: 1px solid #2d2835;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 30px;
+      padding: 22px;
     }
 
     .animation-card img {
-      height: 160px;
+      height: 125px;
+      max-width: 100%;
       width: auto;
       object-fit: contain;
     }
 
     .animation-card span {
-      margin-top: 25px;
-      color: #968ba0;
-      font-size: 12px;
-      letter-spacing: 3px;
+      margin-top: 20px;
+      color: #9d91a6;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
+
+    .spectre {
+      background: #191b25;
+    }
+
+    .spectre img {
+      height: 150px;
+    }
+
 
     /* ENVIRONMENTS */
-
-    .environment-section {
-      margin-top: 90px;
-    }
 
     .environment-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 22px;
     }
 
     .environment-grid img {
@@ -175,30 +244,121 @@
       border: 1px solid #292431;
     }
 
+
     /* NARRATIVE */
 
     .narrative {
-      margin-top: 80px;
       text-align: center;
     }
 
+    .narrative .section-text {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .narrative img {
-      width: min(700px, 100%);
+      width: min(760px, 100%);
       border: 1px solid #292431;
     }
+
+
+    /* FAN ART */
+
+    .personal-work {
+      padding-top: 40px;
+      border-top: 1px solid #28232e;
+    }
+
+    .fan-card {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 45px;
+      align-items: center;
+      padding: 35px;
+      background: #121119;
+      border: 1px solid #292431;
+    }
+
+    .fan-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .fan-label {
+      color: #9c79ba;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+    }
+
+    .fan-card h3 {
+      margin-top: 8px;
+    }
+
+    .fan-card p {
+      color: #aaa1b2;
+    }
+
 
     /* ABOUT */
 
     .about {
-      max-width: 750px;
+      max-width: 760px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
     }
 
+    .about .divider {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .about p {
       color: #aaa1b2;
     }
+
+
+    /* CONTACT */
+
+    .contact {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .contact .divider {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-intro {
+      color: #aaa1b2;
+      margin-bottom: 35px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contact-button {
+      border: 1px solid #5f4773;
+      background: #15121c;
+      padding: 12px 20px;
+      color: #d8c0e8;
+      transition: 0.2s;
+    }
+
+    .contact-button:hover {
+      background: #21182a;
+      border-color: #a77bc4;
+    }
+
 
     /* FOOTER */
 
@@ -207,185 +367,471 @@
       padding: 45px 20px;
       text-align: center;
       color: #716979;
-      font-size: 14px;
+      font-size: 13px;
     }
+
 
     /* MOBILE */
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
+
       header {
-        min-height: 65vh;
+        min-height: 55vh;
       }
 
-      .animations {
-        grid-template-columns: 1fr;
+      .animation-grid,
+      .animation-grid.three {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .environment-grid {
         grid-template-columns: 1fr;
       }
 
-      .animation-card {
-        min-height: 230px;
+      .fan-card {
+        grid-template-columns: 1fr;
       }
+
     }
+
+    @media (max-width: 500px) {
+
+      .animation-grid,
+      .animation-grid.three,
+      .animation-grid.two {
+        grid-template-columns: 1fr;
+      }
+
+      .animation-grid.two {
+        max-width: none;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <header>
-    <div class="hero">
-      <div class="eyebrow">Pixel Art Portfolio</div>
 
-      <h1>Mari B. | Pumpkin Pixelart</h1>
+<!-- HERO -->
 
-      <p class="subtitle">
-        Pixel Artist & 2D Game Artist
-      </p>
+<header>
+
+  <div class="hero">
+
+    <div class="eyebrow">
+      Pixel Art Portfolio
     </div>
-  </header>
+
+    <h1>
+      Mari B. | Pumpkin Pixelart
+    </h1>
+
+    <p class="subtitle">
+      Pixel Artist & 2D Game Artist
+    </p>
+
+  </div>
+
+</header>
 
 
-  <main>
+<main>
 
-    <!-- PROJECT -->
 
-    <section>
+<!-- =====================================
+     ECOS DA MEMÓRIA
+     ===================================== -->
 
-      <h2>Ecos da Memória</h2>
+<section>
 
-      <div class="divider"></div>
+  <h2>Ecos da Memória</h2>
 
-      <p class="project-description">
-        A 2D narrative game exploring memory, aging and different
-        stages of life through pixel art. I worked on character art,
-        animation, environments and visual assets for the project.
+  <div class="divider"></div>
+
+  <p class="project-text">
+    <em>Ecos da Memória</em> is a 2D narrative Metroidvania
+    developed during a Game Jam.
+  </p>
+
+  <p class="project-text">
+    The story follows Joseph, an elderly man who revisits fragmented
+    memories from different stages of his life. Through these memories,
+    he encounters places, people and meaningful moments from his past.
+  </p>
+
+  <p class="project-text">
+    The project explores memory, aging and Alzheimer's disease through
+    visual storytelling, character transformations and pixel art.
+    Different versions of Joseph represent different stages of his life,
+    each with their own visual identity and animation set.
+  </p>
+
+  <p class="project-text">
+    <strong>My role:</strong> Pixel Art & 2D Game Art
+  </p>
+
+
+  <div class="tags">
+
+    <span class="tag">Pixel Art</span>
+    <span class="tag">2D Game Art</span>
+    <span class="tag">Character Design</span>
+    <span class="tag">Character Animation</span>
+    <span class="tag">Environment Art</span>
+    <span class="tag">Game Jam</span>
+
+  </div>
+
+
+  <!-- MAIN ENVIRONMENT -->
+
+  <img
+    class="main-art"
+    src="apartment.png.png"
+    alt="Apartment environment from Ecos da Memória"
+  >
+
+
+  <!-- CHARACTER DESIGN -->
+
+  <div class="subsection character-design">
+
+    <h3>Character Design — Life Stages</h3>
+
+    <p class="section-text">
+      Character designs representing Joseph and important characters
+      throughout different stages of his life, from childhood to old age.
+    </p>
+
+    <img
+      class="character-lineup"
+      src="characters.png.png"
+      alt="Character designs from Ecos da Memória"
+    >
+
+  </div>
+
+
+  <!-- CHARACTER ANIMATION -->
+
+  <div class="subsection">
+
+    <h3>Character Animation</h3>
+
+    <p class="section-text">
+      Animation sets created for different stages of Joseph's life,
+      including locomotion, gameplay actions and character death animations.
+    </p>
+
+
+    <!-- YOUNG JOSEPH -->
+
+    <div class="animation-group">
+
+      <h4>Young Joseph</h4>
+
+      <div class="animation-grid">
+
+        <div class="animation-card">
+          <img src="joseph-young-walk.gif" alt="Young Joseph walk animation">
+          <span>Walk</span>
+        </div>
+
+        <div class="animation-card">
+          <img src="joseph-young-jump.gif" alt="Young Joseph jump animation">
+          <span>Jump</span>
+        </div>
+
+        <div class="animation-card">
+          <img src="joseph-young-slingshot.gif" alt="Young Joseph slingshot animation">
+          <span>Slingshot</span>
+        </div>
+
+        <div class="animation-card">
+          <img src="joseph-young-death.gif" alt="Young Joseph death animation">
+          <span>Death</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ADULT JOSEPH -->
+
+    <div class="animation-group">
+
+      <h4>Adult Joseph</h4>
+
+      <div class="animation-grid three">
+
+        <div class="animation-card">
+          <img src="joseph-walk.gif.gif" alt="Adult Joseph walk animation">
+          <span>Walk</span>
+        </div>
+
+        <div class="animation-card">
+          <img src="joseph-idle.gif.gif" alt="Adult Joseph idle animation">
+          <span>Idle</span>
+        </div>
+
+        <div class="animation-card">
+          <img src="joseph-death.gif.gif" alt="Adult Joseph death animation">
+          <span>Death</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ELDERLY JOSEPH -->
+
+    <div class="animation-group">
+
+      <h4>Elderly Joseph</h4>
+
+      <div class="animation-grid three">
+
+        <div class="animation-card">
+          <img src="joseph-elderly-walk.gif" alt="Elderly Joseph walk animation">
+          <span>Walk</span>
+        </div>
+
+        <div class="animation-card">
+          <img src="joseph-elderly-idle.gif" alt="Elderly Joseph breathing animation">
+          <span>Breathing</span>
+        </div>
+
+        <div class="animation-card">
+          <img src="joseph-elderly-death.gif" alt="Elderly Joseph death animation">
+          <span>Death</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SPECTRES -->
+
+    <div class="animation-group">
+
+      <h4>Spectres — Enemy Animation</h4>
+
+      <p class="section-text">
+        Animated spectral entities created for the game's supernatural
+        environments and encounters.
       </p>
 
+      <div class="animation-grid two">
 
-      <!-- MAIN ENVIRONMENT -->
+        <div class="animation-card spectre">
+          <img src="spectre-01.gif" alt="Spectre animation one">
+          <span>Spectre I</span>
+        </div>
+
+        <div class="animation-card spectre">
+          <img src="spectre-02.gif" alt="Spectre animation two">
+          <span>Spectre II</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ENVIRONMENT ART -->
+
+  <div class="subsection">
+
+    <h3>Environment Art</h3>
+
+    <p class="section-text">
+      Pixel art environments created to represent fragmented memories
+      and different moments from Joseph's life.
+    </p>
+
+    <div class="environment-grid">
 
       <img
-        class="feature"
-        src="apartment.png.png"
-        alt="Pixel art apartment environment from Ecos da Memória"
+        src="forest.png.png"
+        alt="Forest environment from Ecos da Memória"
       >
 
+      <img
+        src="apartment.png.png"
+        alt="Apartment environment from Ecos da Memória"
+      >
 
-      <!-- CHARACTERS -->
+    </div>
 
-      <div class="character-section">
-
-        <h3>Character Design</h3>
-
-        <img
-          class="characters"
-          src="characters.png.png"
-          alt="Characters from Ecos da Memória"
-        >
-
-      </div>
+  </div>
 
 
-      <!-- ANIMATION -->
+  <!-- NARRATIVE SCENE -->
 
-      <div class="animation-section">
+  <div class="subsection narrative">
 
-        <h3>Character Animation</h3>
+    <h3>Narrative Scene — Wedding Memory</h3>
 
-        <div class="animations">
+    <p class="section-text">
+      A memory scene depicting an important moment from Joseph's past,
+      using a minimal environment to keep the focus on the characters
+      and the memory itself.
+    </p>
 
-          <div class="animation-card">
-            <img
-              src="joseph-walk.gif.gif"
-              alt="Joseph walk cycle"
-            >
-            <span>WALK CYCLE</span>
-          </div>
+    <img
+      src="wedding.png.png"
+      alt="Wedding memory scene from Ecos da Memória"
+    >
 
-          <div class="animation-card">
-            <img
-              src="joseph-idle.gif.gif"
-              alt="Joseph idle animation"
-            >
-            <span>IDLE</span>
-          </div>
+  </div>
 
-          <div class="animation-card">
-            <img
-              src="joseph-death.gif.gif"
-              alt="Joseph death animation"
-            >
-            <span>DEATH</span>
-          </div>
-
-        </div>
-
-      </div>
+</section>
 
 
-      <!-- ENVIRONMENTS -->
 
-      <div class="environment-section">
+<!-- =====================================
+     PERSONAL WORK
+     ===================================== -->
 
-        <h3>Environment Art</h3>
+<section class="personal-work">
 
-        <div class="environment-grid">
+  <h2>Personal Work & Fan Art</h2>
 
-          <img
-            src="forest.png.png"
-            alt="Dark forest pixel art environment"
-          >
+  <div class="divider"></div>
 
-          <img
-            src="apartment.png.png"
-            alt="Apartment pixel art environment"
-          >
-
-        </div>
-
-      </div>
+  <p class="project-text">
+    Personal pixel art studies and animations inspired by games,
+    characters and visual storytelling.
+  </p>
 
 
-      <!-- NARRATIVE SCENE -->
+  <div class="fan-card">
 
-      <div class="narrative">
+    <img
+      src="life-is-strange-butterfly.gif"
+      alt="Life is Strange butterfly fan art animation"
+    >
 
-        <h3>Narrative Scene</h3>
+    <div>
 
-        <img
-          src="wedding.png.png"
-          alt="Wedding memory scene from Ecos da Memória"
-        >
+      <span class="fan-label">
+        Fan Art
+      </span>
 
-      </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section class="about">
-
-      <h2>About Me</h2>
-
-      <div class="divider" style="margin-left:auto; margin-right:auto;"></div>
+      <h3>
+        Life is Strange — Butterfly Animation
+      </h3>
 
       <p>
-        I'm Mari, a Digital Games student focused on pixel art,
-        2D game art and character animation. I enjoy creating
-        characters, environments and visual storytelling for games.
+        A fan-made pixel art animation inspired by
+        <em>Life is Strange</em>, created as a study of movement,
+        atmosphere and environmental animation.
       </p>
 
-    </section>
+    </div>
 
-  </main>
+  </div>
+
+</section>
 
 
-  <footer>
-    © 2026 Mari B. | Pumpkin Pixelart
-  </footer>
+
+<!-- =====================================
+     ABOUT
+     ===================================== -->
+
+<section class="about">
+
+  <h2>About Me</h2>
+
+  <div class="divider"></div>
+
+  <p>
+    Hi! I'm Mari, a Digital Games student at Cruzeiro do Sul University
+    in Brazil, focused on Pixel Art, 2D Game Art and animation.
+  </p>
+
+  <p>
+    I enjoy creating characters, environments and animations for games,
+    with a special interest in visual storytelling and character-driven
+    experiences.
+  </p>
+
+  <p>
+    <em>Ecos da Memória</em> was developed during a Game Jam,
+    where I worked on pixel art and visual assets for the game.
+    I'm currently expanding my portfolio through game projects,
+    animation studies and personal work.
+  </p>
+
+</section>
+
+
+
+<!-- =====================================
+     CONTACT
+     ===================================== -->
+
+<section class="contact">
+
+  <h2>Contact</h2>
+
+  <div class="divider"></div>
+
+  <p class="contact-intro">
+    I'm open to opportunities in Pixel Art and 2D Game Art.
+  </p>
+
+
+  <div class="contact-links">
+
+    <a
+      class="contact-button"
+      href="mailto:mari.jbcb@gmail.com"
+    >
+      Email
+    </a>
+
+
+    <a
+      class="contact-button"
+      href="https://wa.me/5517997192410"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WhatsApp
+    </a>
+
+
+    <a
+      class="contact-button"
+      href="https://www.linkedin.com/in/mari-b-615260432"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+  © 2026 Mari B. | Pumpkin Pixelart
+</footer>
+
 
 </body>
 </html>
